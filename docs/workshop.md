@@ -539,3 +539,140 @@ Each of these examples follows the conventional commits format of `<type>(<scope
    style(Button): adjust padding and fonts for better UI consistency
    ```
 
+## Code quality in action : workshop objectives & rules
+
+<img src="media/confucius.jpeg" alt="Confucius" width="1620" height="400"/>
+
+> I hear and I forget. I see and I remember. I do and I understand.
+
+This workshop is designed to apply the principles of clean code and best practices in a real-life scenario.
+It relies on a fictional application, which have many code qualities issues, will make you experience the pain of bad code quality, and the benefits of good practices.
+The objective is to implement the requirements and improve the quality, not to over-think every aspect.
+
+## Workshop setup & timetable
+
+The dvd-store web-app is powered by Quarkus, Java 17 & H2 Database.
+
+<ins>How to run the project locally ?</ins>
+* Checkout the repo https://github.com/worldline/code-quality-workshop.git
+* Create your local branch
+* Open the **pom.xml** located in **dvd-store** sub-folder with your favorite IDE
+* Run the application
+
+Either use the dvd-store run configuration, create a new Quarkus run configuration, or launch via mvn goal.
+``` script
+compile quarkus:dev
+```
+
+The default application port is 8082, customizable in application.properties.
+The database is reset at startup, see class `DataInitTool` to see how a minimal dataset is created.
+
+Several REST APIs are available, documented [here](http://localhost:8082/q/swagger-ui).
+
+Some assumptions you can make :
+* No need to care about DB constraints
+* No Null Entity or fields
+* If you have trouble doing proper DB requests, it is fine to load all entries of a table, then filter it in Java. The objective
+  is not to master https://quarkus.io/guides/hibernate-orm-panache .
+
+You can expect to finish the requirements in 2-4 hours, depending on your experience and the refactoring effort you put in.
+
+
+However, it is recommended to stay with Quarkus, Java 17 and H2 :-)
+
+## Setting the stage : DVD store
+
+This project is an app for a video/DVD renting company, and was developed by (too) many developers. Some of them were part of the owner's family ... and not even developers.
+Hence quality and long-term vision are not the motto for this app. But this stops now !
+
+The company has recently been bought, and the new owner got genius ideas to make the business great again.
+As hiring a PO was too expensive, and his job can't be too complicated, the owner of the shop will be your PO for the day.
+
+Fortunately, your team has been selected to make his dreams a reality, implement features and increase the overall quality.
+You're allowed to modify anything you want:
+* Add new class, new package
+* Change the data model
+* Correct any problems you see 
+* Freedom to organize yourself : could be a good opportunity to do https://en.wikipedia.org/wiki/Pair_programming .
+
+
+### Ready , set.... go !
+
+## Requirements 
+
+<img src="media/fire-leaving.jpg" alt="Leaving a burning project" width="1620" height="400"/>
+
+
+#### It is strongly recommended to implement them in order, as the complexity increases.
+
+#### Don't worry if you don't have enough time to finish : Focus on the journey, not the destination
+
+* Requirement 0 is not very precise and there is several options to implement it, but introducing Movie object will be a huge benefit for the next requirement.
+* Requirement 1 is tougher as you will discover lots of problems, hence lots of refactoring on top of the requirement itself
+
+To help you, some hints are available in the requirements, but don't hesitate to ask for more.
+
+###  Requirement 0 : Refactor and introduce Movie concept
+
+<div style="display: flex; align-items: center;">
+<img src="media/movies.jpg" alt="Example image" width="80" height="80" style="margin-right: 10px;"/>
+<p style="margin-bottom: 0; margin-top: 0;">The future is in content... so the business doesn't know the difference between a DVD and a VideoTape... everything you can watch will now be a Movie !
+All next requirements will be for Movies from now on</p>
+</div>
+
+<details> <summary>Hint</summary>
+Movie could be a new interface,or a new abstract class, you may also need a new enum for the type of movie (DVD, VideoTape).
+This is a good opportunity to get rid of all the petty details slowing you down:
+
+* Confusing names
+* Lack of unit-tests
+* Language barrier
+</details>
+
+
+### Requirement 1 : new pricing logic
+
+
+<div style="display: flex; align-items: center;">
+<img src="media/money.jpg" alt="Example image" width="80" height="80" style="margin-right: 10px;"/>
+<p style="margin-bottom: 0; margin-top: 0;"> We're running out of business because we're not making enough money! 
+ We're gonna change the way we price :
+ The quality of a DVD will drop down with each renting..... so the value should decrease as well.</p>
+</div>
+
+##### Here are the pricing rules :
+
+* Price for a DVD = 10 if it was released more than 10 years ago
+* Actual logic other case , max price is 23 for any movie
+* Oh, and I'm a huge fan of Tom Cruise, every movie is a masterpiece ! Then price when Tom is within a movie should be 15
+
+Add an API that gives the price for a movie ( ISBN ), provide the two prices DVD / VideoTape if possible.
+
+#### Response example 
+
+```json
+{
+  DVDPrice : xxx,
+  VideoPrice : yyy
+}
+```
+OR
+```json
+[
+{ price : xxx, type: DVD },
+{ price : yyy, type : Video }
+]
+``` 
+<details> <summary>Hint</summary>
+Add unit-test for the existing and the new pricing rules.
+I'm not sure the owner realized some of his instructions are contradictory...
+As he's in holiday in the Bahamas, you have to decide what to do with the Tom Cruise rule.
+</details>
+
+## Conclusion
+
+An implementation of the requirements is available in the branch `TODO`, and there are many way to compare what you did with the solution.
+* Open a PR with your branch, and compare the changes.
+* Use a diff tool to compare your code with the solution
+
+We hope that you enjoyed this workshop, and that you learned a lot about clean code and best practices.

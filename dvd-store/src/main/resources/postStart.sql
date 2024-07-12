@@ -1,0 +1,2 @@
+-- This file will be executed ONCE after the server start-up, then after the DB is populated
+-- You could use this to apply DB changes ;-)
