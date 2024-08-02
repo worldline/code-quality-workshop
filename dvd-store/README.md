@@ -1,6 +1,7 @@
-# ep2 kata
+# Code quality workshop
 The objective of this session is to stimulate the team spirit, and illustrate the benefits of good practice:
  - Work in pairs
+ - Code quality
  - Write tests to ensure quality
  - Coding conventions
  

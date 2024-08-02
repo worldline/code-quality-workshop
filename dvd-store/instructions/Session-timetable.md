@@ -1,5 +1,5 @@
 
-# Planning - March 2023 workshop sessions
+# Planning - workshop sessions
 
 ## Before the session
 
@@ -13,16 +13,16 @@ join metro-retro, send people to rooms, solve any issue to get the codebase runn
 
 ### 2h15-2h30 : Requirements will be given... let the fun begin !
 
-Each team will then create his own branch ( `kata_YYYYMMDD_groupX` ) from `workshop/step0-initial-state` and work on it.
+Each team will then create his own branch ( `workshop_YYYYMMDD_groupX` ) from `master` and work on this branch.
 
-Teams may decide how they will work ( pair programming ? parallel programming ? story separated ? unit-tests ? screen-share ? CodeWithMe Plugin ? Cool team name ? Coffee break ?)
+Teams may decide how they will work ( pair programming ? commit frequency ? parallel programming ? story separated ? unit-tests ? screen-share ? CodeWithMe plugin ? cool team name ? coffee break ? what do you want on your pizza ?)
 
-The objective is to implement the given requirements and leverage the overall quality. Best effort strategy.
+The objective is to implement the given requirements and leverage the overall quality, and to share with your team. Best effort strategy.
 
 
-### 15 minutes end session
+###  Debrief session
 
-Don't forget to commit changes and push your branches !
+Don't forget to commit changes and push your branches ! Your code will be reviewed by your peers !
 
 Quick debriefing, poll to gather feedbacks, feelings and improvements.
 
@@ -33,12 +33,10 @@ People can decide to work a bit longer on the requirements if they want to.
 
 The poll will remain open until the debrief session
 
-I will review each branch, to build the debrief-session ( and improve the quality of the workshop of course ! ).
-
 
 ## Debrief session
 
-Will happen some weeks after the workshop, most likely in a fo info-session and will be recorded
+Will happen some weeks after the workshop with not only your cohort, interactive kahoot
 
 Clean code & code - quality - Wall of shame - resources - Q&A
 
