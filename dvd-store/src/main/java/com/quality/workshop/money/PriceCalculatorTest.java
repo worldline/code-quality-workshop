@@ -1,13 +1,13 @@
-package com.worldline.ep2.kata.money;
+package com.quality.workshop.money;
 
-import static com.worldline.ep2.kata.TestEntityHelper.getVideo;
-import static com.worldline.ep2.kata.money.PriceCalculator.computeDVDPrice;
+import static com.quality.workshop.TestEntityHelper.getVideo;
+import static com.quality.workshop.money.PriceCalculator.computeDVDPrice;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import com.worldline.ep2.kata.entity.VideoTape;
+import com.quality.workshop.entity.VideoTape;
 
 
 public class PriceCalculatorTest {

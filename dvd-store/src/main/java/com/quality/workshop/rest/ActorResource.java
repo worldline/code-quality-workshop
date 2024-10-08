@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.rest;
+package com.quality.workshop.rest;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-import com.worldline.ep2.kata.entity.Schauspieler;
+import com.quality.workshop.entity.Schauspieler;
 
 @Path("/actor")
 public class ActorResource {

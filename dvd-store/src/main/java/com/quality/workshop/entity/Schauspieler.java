@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.entity;
+package com.quality.workshop.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
