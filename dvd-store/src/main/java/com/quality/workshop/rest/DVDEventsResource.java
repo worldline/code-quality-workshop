@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.rest;
+package com.quality.workshop.rest;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -10,8 +10,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import com.worldline.ep2.kata.entity.DVD;
-import com.worldline.ep2.kata.entity.DVDRentEvents;
+import com.quality.workshop.entity.DVD;
+import com.quality.workshop.entity.DVDRentEvents;
 
 @Path("/dvdevents")
 @Produces

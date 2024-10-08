@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.entity;
+package com.quality.workshop.entity;
 
 import java.time.LocalDate;
 import java.util.List;

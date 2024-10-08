@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.rest;
+package com.quality.workshop.rest;
 
 import java.io.IOException;
 

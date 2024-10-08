@@ -1,6 +1,6 @@
-package com.worldline.ep2.kata.rest;
+package com.quality.workshop.rest;
 
-import static com.worldline.ep2.kata.rest.RESTUtils.retrieveResourceFromResponse;
+import static com.quality.workshop.rest.RESTUtils.retrieveResourceFromResponse;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.io.IOException;
@@ -12,7 +12,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 
-import com.worldline.ep2.kata.entity.Schauspieler;
+import com.quality.workshop.entity.Schauspieler;
 
 /***
  * Quick example of an integration-test.

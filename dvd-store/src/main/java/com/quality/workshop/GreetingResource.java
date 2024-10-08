@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata;
+package com.quality.workshop;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
