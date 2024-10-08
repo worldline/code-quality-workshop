@@ -1,11 +1,11 @@
-package com.worldline.ep2.kata;
+package com.quality.workshop;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import com.worldline.ep2.kata.entity.Schauspieler;
-import com.worldline.ep2.kata.entity.VideoTape;
+import com.quality.workshop.entity.Schauspieler;
+import com.quality.workshop.entity.VideoTape;
 
 /**
  * Helper class to get Entity-like objects for unit-tests

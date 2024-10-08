@@ -1,7 +1,7 @@
-package com.worldline.ep2.kata.money;
+package com.quality.workshop.money;
 
-import com.worldline.ep2.kata.entity.DVD;
-import com.worldline.ep2.kata.entity.VideoTape;
+import com.quality.workshop.entity.DVD;
+import com.quality.workshop.entity.VideoTape;
 
 public class PriceCalculator {
 

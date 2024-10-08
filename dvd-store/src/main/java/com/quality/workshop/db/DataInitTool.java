@@ -1,4 +1,4 @@
-package com.worldline.ep2.kata.db;
+package com.quality.workshop.db;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -9,10 +9,10 @@ import javax.enterprise.event.Observes;
 
 import javax.transaction.Transactional;
 
-import com.worldline.ep2.kata.entity.DVD;
-import com.worldline.ep2.kata.entity.DVDRentEvents;
-import com.worldline.ep2.kata.entity.Schauspieler;
-import com.worldline.ep2.kata.entity.VideoTape;
+import com.quality.workshop.entity.DVD;
+import com.quality.workshop.entity.DVDRentEvents;
+import com.quality.workshop.entity.Schauspieler;
+import com.quality.workshop.entity.VideoTape;
 
 import io.quarkus.runtime.StartupEvent;
 

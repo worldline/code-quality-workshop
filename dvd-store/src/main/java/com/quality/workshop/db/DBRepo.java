@@ -1,9 +1,9 @@
-package com.worldline.ep2.kata.db;
+package com.quality.workshop.db;
 
 import javax.enterprise.context.ApplicationScoped;
 
 
-import com.worldline.ep2.kata.entity.DVDRentEvents;
+import com.quality.workshop.entity.DVDRentEvents;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
