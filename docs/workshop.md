@@ -436,3 +436,106 @@ Implementations of those methods are implemented one level to the right of the m
 ## Log management
 
 ## Git (conventional commits)
+
+How meaningful is a Git commit?
+
+This is a common issue in software development: you create a branch, make your changes, and then commit them in Git. 
+Ideally, each commit should be self-sufficient, serving as a documentation update, a bug fix, a new feature, etc. 
+
+Well-structured and self-contained commits enhance the readability of the Git history. 
+They also simplify the process of reverting a commit if an issue arises (using ``git revert``) or transferring a specific change to a different maintenance branch (using ``git cherry-pick``).
+
+However, in practice, especially under tight deadlines, we often end up with commits that combine multiple changes or branches filled with several commits that should actually be a single one.
+
+Example:
+
+```
+Fixed stuff
+```
+
+ ### Conventional Commits to the rescue
+
+[The conventional commits specification](https://www.conventionalcommits.org/en/v1.0.0) provides an easy way to create explicit messages
+
+
+The commit message should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+The commit contains the following structural elements, to communicate intent to the consumers of your library:
+
+1. ``fix``: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
+2. ``feat``: a commit of the type feat introduces a new feature to the codebase (this correlates with MINOR in Semantic Versioning).
+3. ``BREAKING CHANGE``: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+4. types other than ``fix:`` and ``feat:`` are allowed, for example ``@commitlint/config-conventional`` (based on the Angular convention) recommends ``build:, chore:, ci:, docs:, style:, refactor:, perf:, test:``, and others.
+5. footers other than ``BREAKING CHANGE: <description>`` may be provided and follow a convention similar to git trailer format.
+
+
+#### Benefits
+
+##### Benefit #1 - Clarity and Consistency
+
+Conventional commits provide a clear and structured way to write commit messages. This consistent format makes it easier for developers to understand the purpose of each commit at a glance.
+
+##### Benefit #2 - Enhanced Automation
+
+Conventional commits can be parsed by tools, and a very nice use-case is that of generating release changelogs.
+
+
+##### Benefit #3 - Better Collaboration
+
+With a common format for commit messages, team members can quickly grasp the context and intent of changes made by others. This fosters better communication and collaboration within a team, especially in larger projects.
+
+### Examples
+
+Below some examples of Git commit messages using this specification. You could gere more [here](https://www.conventionalcommits.org/en/v1.0.0/#examples).
+
+Each of these examples follows the conventional commits format of `<type>(<scope>): <description>`, making it clear what was changed, where it was changed, and why it matters.
+
+
+1. **Feature Addition**:
+   ```
+   feat(user-auth): add OAuth2 support for user login
+   ```
+
+2. **Bug Fix**:
+   ```
+   fix(api): resolve error handling in user profile endpoint
+   ```
+
+3. **Documentation Update**:
+   ```
+   docs(README): update installation instructions for better clarity
+   ```
+
+4. **Refactor**:
+   ```
+   refactor(components): simplify Props validation in Button component
+   ```
+
+5. **Performance Improvement**:
+   ```
+   perf(loader): improve loading time by optimizing image assets
+   ```
+
+6. **Chore**:
+   ```
+   chore(package): update dependencies to latest versions
+   ```
+
+7. **Test Addition**:
+   ```
+   test(profile): add unit tests for profile update functionality
+   ```
+
+8. **Style Change**:
+   ```
+   style(Button): adjust padding and fonts for better UI consistency
+   ```
+
