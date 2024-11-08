@@ -34,7 +34,7 @@ During this workshop we will cover:
 | [Java](https://www.oracle.com/java/)   | novice |   
 | [Maven](https://www.maven.apache.org/) | novice |
 
-### :wrench: Tools
+### Tools
 #### If you want to execute this workshop locally
 You **MUST** have set up these tools first:
 * [Java 21+](https://adoptium.net/temurin/releases/?version=21)
@@ -181,11 +181,11 @@ For example :
 /**
 *return Coordinates in cartesian coordinate system
 */
-public Coordinates getCoordiantes();
+public Coordinates getCoordinates();
 ```
 But it is better to use the name of the function to convey the information as much as possible.
 ```java
-public Coordinates getCartesianCoordiantes();
+public Coordinates getCartesianCoordinates();
 ```
 
 #### Warning of Consequences
