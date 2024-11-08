@@ -24,10 +24,16 @@ During this workshop we will cover:
 * Log management
 * GIT (conventional commits)
 
+
+### Getting involved?
+
+The source code is available on [GitHub](https://github.com/worldline/code-quality-workshop/).
+
+Feel free to raise any issues or participate!
+
 ## Prerequisites
 
-
-### :mortar_board: Skills
+### Skills
 
 | Skill                                  | Level | 
 |----------------------------------------|---|
